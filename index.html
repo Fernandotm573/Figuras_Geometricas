@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geonétricas</title>
+
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <!--    ENCABEZADO -->
+    <header class="header">
+        <h1 class="header-title">Figuras Geométricas</h1>
+        <p class="header-description">
+            Calcular diferentes medidas de figuras geométricas 
+             Àrea Perímetro y Radio.
+        </p>
+    </header>
+
+    <!-- RESPUESTA  -->
+    <div class="answer">
+        <p id='result' >Resultado</p>
+    </div
+  
+
+      <!-- SECCION CAJAS-->
+
+    <section class="figures">
+        <div class="box">
+            <div class="box-header">
+                <h2>Cuadrado</h2>
+            </div>
+            <div class="box-main">
+                <p class="box-main__text">¿Cuanto mide Cada lado del cuadrado?</p>
+                <input 
+                    class="box-main__input" 
+                    type="number" 
+                    name="inputSide" 
+                    id="inputSide"
+                    placeholder="Ingrese los lados"
+                >
+                <button class="box-main__btn" type="button" onclick="calPeriSquare()">
+                     Perímetro
+                </button>
+                <button class="box-main__btn" type="button"onclick='calAreaSquare()'>
+                    Área
+                </button>
+            </div>
+        </div>
+
+                              <!-- TRIANGULO Perimetro -->
+
+        <div class="box">
+            <div class="box-header">
+                <h2>Triangulo</h2>
+            </div>
+            <div class="box-main">
+                <p class="box-main__text" >¿Cuanto mide Cada lado del Triangulo?</p>
+                <input 
+                    class="box-main__input" 
+                    type="number" 
+                    name="sideTrianle1" 
+                    id="side1"
+                    placeholder="Ingrese lado 01"
+                >
+                <input 
+                    class="box-main__input" 
+                    type="number" 
+                    name="sideTriangle2" 
+                    id="side2"
+                    placeholder="Ingrese lado 02"
+                >
+                <input 
+                    class="box-main__input" 
+                    type="number" 
+                    name="sideTriangle3" 
+                    id="side3"
+                    placeholder="Ingrese lado 03"
+                >
+
+                <button class="box-main__btn" type="button" onclick='calPerimTriangle()'>Perímetro</button>
+
+
+                           <!-- TRIANGULO area -->
+
+                <p class="box-main__text" >¿Cuanto mide base y altura del Triangulo?</p>
+                <input 
+                    class="box-main__input" 
+                    type="number" 
+                    name="b" 
+                    id="b"
+                    placeholder="Ingrese Base"
+                >
+                <input 
+                    class="box-main__input" 
+                    type="number" 
+                    name="h" 
+                    id="h"
+                    placeholder="Ingrese Altura"
+                >
+                <button class="box-main__btn" type="button" onclick='calAreaTriangle()'>Área</button>
+
+            </div>
+        </div>
+
+                             <!-- Circulo Diametro -->
+
+        <div class="box">
+            <div class="box-header">
+                <h2>Circulo</h2>
+            </div>
+            <div class="box-main">
+                <p class="box-main__text">¿Cuanto mide el Radio del circulo?</p>
+                <input 
+                    class="box-main__input" 
+                    type="number" 
+                    name="diametro" 
+                    id="inputRadio"
+                    placeholder="Ingrese Radio"
+                >
+                <button class="box-main__btn" type="button" onclick='calDiameCircle()'>Diámetro</button>
+                <button class="box-main__btn" type="button" onclick='calPerimetroCircle ()'>Perímetro</button>
+                <button class="box-main__btn" type="button" onclick='calAreaCircle()'>Área</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+</html>
